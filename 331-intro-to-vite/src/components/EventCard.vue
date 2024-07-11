@@ -7,6 +7,7 @@ import {ref} from 'vue'
   // }>
 </script>
 
+
 <template>
   <div class="event-class"></div>
 </template>
