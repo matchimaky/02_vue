@@ -5,8 +5,7 @@
 </script>
 
 <template>
-  <div class="greetings">
-  </div>
+  <div class="greetings"></div>
 </template>
 
 
