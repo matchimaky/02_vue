@@ -19,9 +19,15 @@ defineProps<{
 
 <template>
   <div class="event-class">
-    <div class="“event-card”">
-      <h2>{{ event.title }}</h2>
-      <span>@{{ event.time }} on {{ event.date }}</span>
+    <div class="event-card">
+      <h2 v-if="event.category !== 'lunch'">{{ event.title }}</h2>
+      <span v-if="event.category !== 'lunch'">@{{ event.time }} on {{ event.date }}</span>
+      <h2 v-if="event.category === 'lunch'" :style="{ textAlign: 'right', fontSize: '16px' }">
+        {{ event.category }}
+      </h2>
+      <h2 v-if="event.category === 'lunch'" :style="{ textAlign: 'right', fontSize: '16px' }">
+        {{ event.organizer }}
+      </h2>
     </div>
   </div>
 </template>
