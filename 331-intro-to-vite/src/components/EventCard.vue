@@ -5,32 +5,27 @@ defineProps<{
   event: Event
 }>()
 // const event = ref({
-// id: 5928101,
-// category: 'animal welfare',
-// title: 'cat Adoption Day',
-// description: 'Find your new feline friend at this event',
-// location: 'Meow Town',
-// date:'January 28,2022',
-// time: '12:00',
-// petsAllowed: true,
-// organizer: 'Kat Laydee'
+//   id: 5928101,
+//   category: 'animal welfare',
+//   title: 'Cat Adaption Day',
+//   description: 'Find your new feline friend at this event.',
+//   location: 'Meow Town',
+//   date: 'January 8, 2022',
+//   time: '12:00',
+//   petAllowed: true,
+//   organizer: 'Kat laydee'
 // })
 </script>
 
 <template>
   <div class="event-class">
     <div class="event-card">
-      <h2 v-if="event.category !== 'lunch'">{{ event.title }}</h2>
-      <span v-if="event.category !== 'lunch'">@{{ event.time }} on {{ event.date }}</span>
-      <h2 v-if="event.category === 'lunch'" :style="{ textAlign: 'right', fontSize: '16px' }">
-        {{ event.category }}
-      </h2>
-      <h2 v-if="event.category === 'lunch'" :style="{ textAlign: 'right', fontSize: '16px' }">
-        {{ event.organizer }}
-      </h2>
+      <h2>{{ event.title }}</h2>
+      <span>@{{ event.time }} on {{ event.date }}</span>
     </div>
   </div>
 </template>
+
 <style scoped>
 .event-card {
   padding: 20px;

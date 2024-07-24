@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import StudentService from '@/services/StudentService'
+import EventStudent from '@/services/EventStudent'
 
 const students = ref([])
 
 onMounted(() => {
-  StudentService.getStudents()
+  EventStudent.getStudents()
     .then((response) => {
       students.value = response.data
     })
